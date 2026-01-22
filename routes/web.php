@@ -5,10 +5,9 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 
-// Route::get('/', [HomeController::class, 'index']);
 Route::get('/', function () {
-    return view('home');
+    return view('pages.home');
 });
 
-Route::view('/about', 'about');
-Route::view('/contact', 'contact');
+Route::view('/about', 'pages.about');
+Route::view('/contact', 'pages.contact');

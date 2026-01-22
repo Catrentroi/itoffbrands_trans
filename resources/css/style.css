@@ -95,22 +95,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-title {
-    font-size: clamp(3.2rem, 8vw, 7.5rem);
+    font-size: clamp(56px, 10vw, 100px);
+    font-weight: 800;
     line-height: 1.05;
-    font-weight: 600;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.04em;
+    margin-bottom: 48px;
 }
 
-/* mỗi dòng là 1 mask */
 .hero-title .line {
     display: block;
     overflow: hidden;
 }
 
-/* text thật sự animate */
 .hero-title .line span {
-    display: block;
-    will-change: transform;
+    display: inline-block;
+    /* will-change: transform; */
 }
 
 .hero-sub {
@@ -159,6 +158,10 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
 }
 
+.char {
+    display: inline-block;
+    will-change: transform;
+}
 
 /* ===============================
    SERVICES
