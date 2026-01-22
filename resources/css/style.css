@@ -12,6 +12,74 @@ body {
     font-family: Inter, system-ui, -apple-system, sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 8vw;
+}
+
+.header .logo {
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    color: #fff;
+}
+
+.header-nav {
+    display: flex;
+    gap: 2rem;
+}
+
+.header-nav a {
+    text-decoration: none;
+    color: #fff;
+    opacity: 0.8;
+    font-size: 0.95rem;
+    transition: opacity 0.3s ease;
+}
+
+.header-nav a:hover {
+    opacity: 1;
+}
+
+.header-nav a.active {
+    opacity: 1;
+    font-weight: 600;
+}
+
+.footer {
+    padding: 80px 24px;
+    background: #0e0e0e;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-brand {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.footer-copy {
+    font-size: 14px;
+    opacity: 0.6;
+}
+
+
 /* ===============================
    HERO
 ================================ */

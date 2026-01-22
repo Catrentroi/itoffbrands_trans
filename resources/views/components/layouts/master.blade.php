@@ -11,8 +11,9 @@
 
 <body>
 
+    @include('components.layouts.header', ['title' => isset($title) ? $title : 'Offbrand'])
     @yield('content')
-
+    @include('components.layouts.footer')
 
 </body>
 
