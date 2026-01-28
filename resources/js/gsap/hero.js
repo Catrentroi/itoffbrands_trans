@@ -2,43 +2,35 @@ import { gsap } from "gsap";
 import SplitType from "split-type";
 
 export function heroAnimation() {
-    const elements = document.querySelectorAll(".split-text");
-    if (!elements.length) return;
+    const titles = document.querySelectorAll(".split-text");
 
-    const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-
-    elements.forEach((el, index) => {
-        const split = new SplitType(el, {
-            types: "chars",
-        });
-
-        tl.from(
-            split.chars,
-            {
-                yPercent: 100,
-                opacity: 0,
-                duration: 1,
-                stagger: 0.04,
-            },
-            index * 0.15,
-        );
+    titles.forEach((el) => {
+        new SplitType(el, { types: "chars" });
     });
 
-    tl.from(
-        "#hero-sub",
-        {
-            y: 20,
-            opacity: 0,
-            duration: 0.6,
-        },
-        "-=0.4",
-    ).from(
-        "#hero-link",
-        {
-            y: 20,
-            opacity: 0,
-            duration: 0.5,
-        },
-        "-=0.3",
-    );
+    const chars = document.querySelectorAll(".char");
+
+    gsap.from(chars, {
+        yPercent: 100,
+        opacity: 0,
+        duration: 1.5,
+        stagger: 0.04,
+        ease: "power3.out",
+    });
+
+    gsap.from("#hero-sub", {
+        y: 20,
+        opacity: 0,
+        duration: 2,
+        ease: "power3.out",
+        delay: 1.0,
+    });
+
+    gsap.from("#hero-link", {
+        y: 20,
+        opacity: 0,
+        duration: 2,
+        ease: "power3.out",
+        delay: 1.2,
+    });
 }

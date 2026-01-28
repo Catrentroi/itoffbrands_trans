@@ -8,11 +8,11 @@
         </h1>
 
         <div class="hero-meta">
-            <p id="hero-sub" class="hero-sub split-text">
+            <p id="hero-sub" class="hero-sub">
                 A creative studio focused on identity, digital experiences and motion.
             </p>
 
-            <a href="#" id="hero-link" class="hero-link split-text">
+            <a href="#" id="hero-link" class="hero-link">
                 View our work
             </a>
         </div>
