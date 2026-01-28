@@ -79,89 +79,156 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 0.6;
 }
 
+/* ================= HERO ================= */
 
-/* ===============================
-   HERO
-================================ */
 .hero {
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 10vh 8vw;
+    display: grid;
+    place-items: center;
+    /* overflow: hidden; */
 }
 
 .hero-inner {
-    max-width: 1200px;
+    position: relative;
+    min-height: 70vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    align-items: center;
 }
+
+.hero-clip {
+    /* overflow: hidden; */
+    width: 100%;
+}
+/* ---------- TITLE ---------- */
 
 .hero-title {
-    font-size: clamp(56px, 10vw, 100px);
+    position: relative;
+    top: auto;
+    transform: translateY(-25%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+    gap: 1rem;
+    font-size: clamp(4rem, 12vw, 6.5rem);
     font-weight: 800;
     line-height: 1.05;
-    letter-spacing: -0.04em;
-    margin-bottom: 48px;
+    z-index: 3;
+    overflow: visible;
 }
 
-.hero-title .line {
-    display: block;
-    overflow: hidden;
+.line {
+    overflow: visible;
+    padding-bottom: 30px;
+    line-height: 1.1;
+    white-space: nowrap;
 }
 
-.hero-title .line span {
+.line.left {
+    text-align: left;
+}
+
+.line.right {
+    text-align: right;
+}
+
+.word {
     display: inline-block;
-    /* will-change: transform; */
+    white-space: nowrap;
+    transform: translateX(0);
+}
+
+.char {
+    display: inline-block;
+    white-space: nowrap;
+    transform: translateY(100%);
+}
+
+/* ---------- SPHERE ---------- */
+
+.hero-object {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    z-index: 1;
+}
+
+.sphere {
+    width: 520px;
+    height: 520px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ffe6b3, #f7b2b7 40%, #b3e6ff 80%);
+    opacity: 0.95;
+    transform: translateY(-100px);
+}
+
+/* ---------- META ---------- */
+
+.hero-meta {
+    position: relative;
+    z-index: 4;
+    margin-top: 2rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    text-align: center;
 }
 
 .hero-sub {
-    margin-top: 2.5rem;
     max-width: 420px;
+    text-align: center;
     font-size: 1.1rem;
     line-height: 1.6;
-    opacity: 0.65;
+    opacity: 0.85;
+    transform: translateY(80px);
     will-change: transform, opacity;
-}
-
-.hero-meta {
-    margin-top: 3rem;
-    display: flex;
-    gap: 2.5rem;
-    align-items: center;
 }
 
 .hero-link {
     position: relative;
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    display: inline-block;
     text-decoration: none;
     color: #fff;
-    opacity: 0.8;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
 }
 
 .hero-link::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -4px;
+    bottom: -6px;
     width: 100%;
     height: 1px;
     background: currentColor;
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.4s ease;
+    transition: transform 0.45s ease;
+}
+
+.hero-link:hover {
+    opacity: 1;
 }
 
 .hero-link:hover::after {
     transform: scaleX(1);
 }
-.hero-link:hover {
-    opacity: 1;
+
+
+.hero-title,
+.line,
+.word,
+.sphere {
+    pointer-events: none;
 }
 
-.char {
-    display: inline-block;
-    will-change: transform;
-}
+
 
 /* ===============================
    SERVICES
