@@ -1,5 +1,5 @@
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,11 +9,12 @@ export function servicesAnimation() {
     gsap.from(".services-title .line span", {
         scrollTrigger: {
             trigger: ".services",
-            start: "top 75%",
+            start: "top 85%",
+            // markers: true, // Uncomment to debug
         },
         yPercent: 120,
         stagger: 0.12,
-        duration: 0.8,
+        duration: 1.4,
         ease: "power3.out"
     });
 
@@ -25,8 +26,8 @@ export function servicesAnimation() {
         },
         y: 30,
         autoAlpha: 0,
-        stagger: 0.15,
-        duration: 0.6,
+        stagger: 0.25,
+        duration: 1,
         ease: "power2.out"
     });
 }

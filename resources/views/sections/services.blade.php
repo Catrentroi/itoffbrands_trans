@@ -3,7 +3,8 @@
 
         <h2 class="services-title">
             <span class="line"><span>WHAT</span></span>
-            <span class="line"><span>WE DO</span></span>
+            <span class="line"><span>WE</span></span>
+            <span class="line"><span>DO</span></span>
         </h2>
 
         <div class="services-list">

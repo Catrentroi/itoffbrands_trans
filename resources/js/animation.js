@@ -19,11 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+    /*
     gsap.to(progressBar, {
         width: () => (scrollY / docHeight) * 100 + "%",
         ease: "none",
         scrollTrigger: { scrub: 0.3 }
     });
+    */
 
 
     window.addEventListener("load", () => {

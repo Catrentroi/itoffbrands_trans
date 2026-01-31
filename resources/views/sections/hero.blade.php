@@ -3,11 +3,11 @@
         <div class="hero-inner">
             <h1 class="hero-title">
                 <span class="line left">
-                    <span class="word split-text" data-x="-18">WE CREATE</span>
+                    <span class="word split-text" data-x="-22">WE CREATE</span>
                 </span>
 
                 <span class="line right">
-                    <span class="word split-text" data-x="14">BOLD</span>
+                    <span class="word split-text" data-x="20">BOLD</span>
                 </span>
 
                 <span class="line left">

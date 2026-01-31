@@ -1,4 +1,10 @@
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export function workAnimation() {
+
     gsap.from(".work-item", {
         scrollTrigger: {
             trigger: ".work-grid",
